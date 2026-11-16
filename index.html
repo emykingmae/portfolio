@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justin Thrift | Portfolio</title>
+    <link rel="canonical" href="https://justinthrift.design/">
+    <script>
+        if (window.location.hostname.startsWith("www.")) {
+            window.location.replace(window.location.href.replace("www.", ""));
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="scripts/theme.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="home-page">
+    <header class="site-header site-header--fixed">
+        <div class="container site-header__inner">
+            <a class="logo-mark" href="#top" aria-label="Justin Thrift home">
+                <span class="logo-mark__square" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 10.5 12 3l9 7.5"></path>
+                        <path d="M5 9v11h5v-6h4v6h5V9"></path>
+                    </svg>
+                </span>
+            </a>
+
+            <div class="header-actions">
+                <nav class="desktop-nav site-nav" aria-label="Primary">
+                    <ul>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#resume">Resume</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <button class="theme-toggle" type="button" aria-label="Switch to dark mode">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                        <circle cx="12" cy="12" r="4"></circle>
+                        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+                    </svg>
+                    <span class="theme-toggle__label theme-toggle__label--dark">Dark</span>
+                    <span class="theme-toggle__label theme-toggle__label--light">Light</span>
+                </button>
+
+                <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-nav">
+                    <span class="line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <nav class="mobile-nav site-nav" id="mobile-nav" aria-label="Mobile primary">
+        <ul>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main id="top">
+        <section class="hero" aria-labelledby="hero-heading">
+            <div class="container hero__inner">
+                <div class="hero__copy">
+                    <h1 id="hero-heading">Justin Thrift</h1>
+                    <p>I’m a senior product designer at <a href="https://monzo.com/" target="_blank" rel="noopener noreferrer">Monzo</a>, one of the UK’s largest digital banks, with over 15 million customers. I design and ship mobile banking experiences in a complex, regulated environment, where clarity and trust matter as much as polish.</p>
+                    <p>I like owning problems end to end, prototyping with production code, and getting real product into people’s hands.</p>
+                    <p class="hero__location">
+                        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"></path>
+                            <circle cx="12" cy="9.5" r="2.5"></circle>
+                        </svg>
+                        London
+                    </p>
+                </div>
+                <div class="hero__media">
+                    <img class="hero__avatar" src="images/justin-thrift.jpg" width="720" height="720" alt="Justin Thrift smiling outdoors in a cap, with green hills behind">
+                </div>
+            </div>
+        </section>
+
+        <section class="section projects-section" id="projects" aria-labelledby="projects-heading">
+            <div class="container">
+                <h2 id="projects-heading" class="visually-hidden">Projects</h2>
+                <div class="cards-grid">
+                    <a class="study-card" href="case-studies/monzo-mobile.html">
+                        <div class="study-card__media">
+                            <div class="study-card__visual" aria-hidden="true">
+                                <span class="study-card__device study-card__device--back"></span>
+                                <span class="study-card__device study-card__device--front"></span>
+                            </div>
+                        </div>
+                        <div class="study-card__body">
+                            <div class="study-card__copy">
+                                <h3>Launching Monzo Mobile</h3>
+                                <p>How building and launching Monzo Mobile made Monzo more than a bank.</p>
+                            </div>
+                            <span class="study-card__cta">Read Case Study</span>
+                        </div>
+                    </a>
+
+                    <a class="study-card" href="case-studies/travel-esims.html">
+                        <div class="study-card__media">
+                            <div class="study-card__visual" aria-hidden="true">
+                                <span class="study-card__device study-card__device--back"></span>
+                                <span class="study-card__device study-card__device--front"></span>
+                            </div>
+                        </div>
+                        <div class="study-card__body">
+                            <div class="study-card__copy">
+                                <h3>Launching Travel eSIMs</h3>
+                                <p>Uniting travel connectivity with a clearer, faster eSIM experience.</p>
+                            </div>
+                            <span class="study-card__cta">Read Case Study</span>
+                        </div>
+                    </a>
+
+                    <a class="study-card" href="case-studies/bark-2-0.html">
+                        <div class="study-card__media">
+                            <div class="study-card__visual" aria-hidden="true">
+                                <img class="study-card__phone study-card__phone--left" src="images/bark/card-phone-home.png" width="480" height="982" alt="" loading="lazy">
+                                <img class="study-card__phone study-card__phone--right" src="images/bark/card-phone-profile.png" width="480" height="982" alt="" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="study-card__body">
+                            <div class="study-card__copy">
+                                <h3>Launching Bark 2.0</h3>
+                                <p>Turning a lead-gen app into a marketplace buyers control, and growing contact rate nearly 5×.</p>
+                            </div>
+                            <span class="study-card__cta">Read Case Study</span>
+                        </div>
+                    </a>
+
+                    <a class="study-card" href="case-studies/network-feedback.html">
+                        <div class="study-card__media">
+                            <div class="study-card__visual" aria-hidden="true">
+                                <img class="study-card__phone study-card__phone--left" src="images/network-feedback/phone-1.webp" width="978" height="2000" alt="" loading="lazy">
+                                <img class="study-card__phone study-card__phone--right" src="images/network-feedback/phone-3.webp" width="978" height="2000" alt="" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="study-card__body">
+                            <div class="study-card__copy">
+                                <h3>Shipping Network Feedback</h3>
+                                <p>Designing and building an in-app feedback flow with Claude Code, from idea to production in 3 days.</p>
+                            </div>
+                            <span class="study-card__cta">Read Case Study</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section content-section" id="about" aria-labelledby="about-heading">
+            <div class="container">
+                <article class="content-panel">
+                    <h2 id="about-heading">About</h2>
+                    <p>I believe truly great design leads to business growth because of how we solve our customers' real problems; critically, this includes understanding the problem behind what our customers are telling us, shipping software people actually want to use, and using both qualitative and quantitative evidence to inform and measure these decisions.</p>
+                    <p>I believe good design work leads to a healthy tension. Advocating for our customers is not always a smooth process. Currently I'm working as a Senior Product Designer at Monzo, on a mission to make money work for everyone.</p>
+                    <p>Before design, I got my start working in the trade publishing industry for various large publishers, including Penguin Random House, as a managing editor of physical and digital products. It was there I first worked with designers of all kinds and discovered where I wanted to go next in my career.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section content-section" id="resume" aria-labelledby="resume-heading">
+            <div class="container">
+                <details class="content-panel content-panel--boxed resume-panel" open>
+                    <summary class="resume-panel__toggle">
+                        <h2 id="resume-heading">Resume</h2>
+                        <span class="resume-panel__chevron" aria-hidden="true"></span>
+                    </summary>
+
+                    <div class="resume">
+                        <div class="resume-company">
+                            <img class="resume-company__logo" src="images/logos/monzo.jpg" width="112" height="112" alt="" loading="lazy">
+                            <div class="resume-row">
+                                <span class="resume-company__name">Monzo Bank</span>
+                                <span class="resume-dates">Jun 2025 – Present</span>
+                            </div>
+                            <h3 class="resume-title">Senior Product Designer</h3>
+                            <p class="resume-desc">Building Monzo Mobile.</p>
+                        </div>
+
+                        <div class="resume-company">
+                            <img class="resume-company__logo" src="images/logos/bark.jpg" width="112" height="112" alt="" loading="lazy">
+                            <div class="resume-row">
+                                <span class="resume-company__name">Bark.com</span>
+                                <span class="resume-dates">Jun 2024 – May 2025</span>
+                            </div>
+                            <h3 class="resume-title">Senior Product Designer</h3>
+                            <p class="resume-desc">Led design for Bark's mobile app experiences, including bringing Bark's newest consumer app to market for the buyer side of the marketplace. Partnered with product, engineering and insights on rapid ideation, and led UX research from discovery to validation across the seller and buyer apps.</p>
+                        </div>
+
+                        <div class="resume-company">
+                            <img class="resume-company__logo" src="images/logos/reforge.jpg" width="112" height="112" alt="" loading="lazy">
+                            <div class="resume-row">
+                                <span class="resume-company__name">Reforge</span>
+                                <span class="resume-dates">Nov 2020 – Jun 2024</span>
+                            </div>
+                            <div class="resume-role">
+                                <div class="resume-row">
+                                    <h3 class="resume-title">Product Designer</h3>
+                                    <span class="resume-dates">Apr 2023 – Jun 2024</span>
+                                </div>
+                                <p class="resume-desc">Designed in a product pod with engineers, data analysts and PMs, taking new products and features from ideation to code. Helped launch Reforge Artifacts, led design on public events (3x registrations, +10% account signups) and shipped new Artifacts filtering that doubled filter usage and lifted click-through 20%.</p>
+                            </div>
+                            <div class="resume-role">
+                                <div class="resume-row">
+                                    <h3 class="resume-title">UX Visual Designer</h3>
+                                    <span class="resume-dates">Nov 2020 – Mar 2023</span>
+                                </div>
+                                <p class="resume-desc">Led design for Reforge's course experience alongside industry experts, strategists and product teams, including the Product Leadership, Data for PMs, Marketing Technology and Growth Leadership programs.</p>
+                            </div>
+                        </div>
+
+                        <div class="resume-company">
+                            <img class="resume-company__logo" src="images/logos/urality.jpg" width="112" height="112" alt="" loading="lazy">
+                            <div class="resume-row">
+                                <span class="resume-company__name">Urality</span>
+                                <span class="resume-dates">Apr 2020 – Oct 2023</span>
+                            </div>
+                            <h3 class="resume-title">Product Designer (Freelance)</h3>
+                            <p class="resume-desc">Designed a smart city platform that helps main street communities and economic development agencies across the United States make better decisions, connect with residents and manage local data.</p>
+                        </div>
+
+                        <div class="resume-company">
+                            <img class="resume-company__logo" src="images/logos/penguin-random-house.jpg" width="112" height="112" alt="" loading="lazy">
+                            <div class="resume-row">
+                                <span class="resume-company__name">Penguin Random House</span>
+                                <span class="resume-dates">Jun 2015 – Nov 2020</span>
+                            </div>
+                            <div class="resume-role">
+                                <div class="resume-row">
+                                    <h3 class="resume-title">Managing Editor</h3>
+                                    <span class="resume-dates">Nov 2016 – Nov 2020</span>
+                                </div>
+                                <p class="resume-desc">Supervised a team of 8 editors and led the publication of 250+ cooking and lifestyle books a year. Ran weekly design workshops with interior and cover design leads, and worked with engineering to improve internal editorial tools.</p>
+                            </div>
+                            <div class="resume-role">
+                                <div class="resume-row">
+                                    <h3 class="resume-title">Associate Managing Editor</h3>
+                                    <span class="resume-dates">Jun 2015 – Nov 2016</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="resume-company">
+                            <img class="resume-company__logo" src="images/logos/penguin-random-house.jpg" width="112" height="112" alt="" loading="lazy">
+                            <div class="resume-row">
+                                <span class="resume-company__name">Penguin Publishing Group</span>
+                                <span class="resume-dates">Jun 2013 – Jun 2015</span>
+                            </div>
+                            <h3 class="resume-title">Assistant Managing Editor</h3>
+                        </div>
+
+                        <div class="resume-company">
+                            <img class="resume-company__logo" src="images/logos/macmillan.jpg" width="112" height="112" alt="" loading="lazy">
+                            <div class="resume-row">
+                                <span class="resume-company__name">Macmillan</span>
+                                <span class="resume-dates">Jul 2011 – Jun 2013</span>
+                            </div>
+                            <h3 class="resume-title">Managing Editorial Assistant</h3>
+                            <p class="resume-desc">Took bestselling fiction from manuscript to finished book at Tor Books, a leading science fiction and fantasy publisher.</p>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+        <div class="container site-footer__inner">
+            <div class="site-footer__main">
+                <h2 class="site-footer__heading">Connect</h2>
+                <p class="site-footer__intro">I’m always looking to chat about all things design, or the latest good book you’ve read.</p>
+                <div class="site-footer__links">
+                    <div class="site-footer__email-row">
+                        <span class="site-footer__email">justinbthrift@gmail.com</span>
+                        <button type="button" class="site-footer__copy" data-copy="justinbthrift@gmail.com" aria-label="Copy email address">
+                            <svg class="site-footer__copy-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="9" y="9" width="12" height="12" rx="2"></rect>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                            </svg>
+                            <svg class="site-footer__check-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 6 9 17l-5-5"></path>
+                            </svg>
+                        </button>
+                        <span class="site-footer__copy-status" role="status" aria-live="polite"></span>
+                    </div>
+                    <a class="site-footer__linkedin" href="https://www.linkedin.com/in/justinthrift/" target="_blank" rel="noopener noreferrer"><img class="site-footer__linkedin-logo" src="images/linkedin-logo.png" width="201" height="185" alt="">LinkedIn <span aria-hidden="true">↗</span></a>
+                </div>
+            </div>
+            <p class="site-footer__legal">© 2026 Justin Thrift. Built with <span aria-label="love">❤️</span> on planet Earth.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/navigation.js"></script>
+    <script src="scripts/resume-panel.js"></script>
+    <script src="scripts/footer.js"></script>
+</body>
+</html>
