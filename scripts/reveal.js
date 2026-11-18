@@ -20,7 +20,8 @@
         window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (prefersReduced || !("IntersectionObserver" in window)) return;
 
-    const items = document.querySelectorAll(".case-block .container > *");
+    // Quote bubbles have their own animation (below), so their figure isn't faded as a whole.
+    const items = document.querySelectorAll(".case-block .container > :not(.case-quotes)");
     if (!items.length) return;
 
     items.forEach(function (item) {
@@ -42,5 +43,43 @@
 
     items.forEach(function (item) {
         observer.observe(item);
+    });
+})();
+
+// Speech bubble quotes: each bubble pops in from its own side as it scrolls
+// into view. Bubbles that arrive together are staggered so they read like
+// people speaking one after another.
+(function () {
+    const prefersReduced =
+        window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReduced || !("IntersectionObserver" in window)) return;
+
+    const bubbles = document.querySelectorAll(".case-quotes__item");
+    if (!bubbles.length) return;
+
+    document.documentElement.classList.add("quotes-ready");
+
+    // Each bubble waits its turn: it starts at least GAP after the previous
+    // one, even when the browser reports them in separate batches.
+    const GAP = 180; // ms
+    let nextStart = 0;
+
+    const observer = new IntersectionObserver(
+        function (entries) {
+            entries.forEach(function (entry) {
+                if (!entry.isIntersecting) return;
+                const now = performance.now();
+                const start = Math.max(now, nextStart);
+                nextStart = start + GAP;
+                entry.target.style.setProperty("--delay", (start - now) / 1000 + "s");
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+            });
+        },
+        { rootMargin: "0px 0px -12% 0px", threshold: 0.6 }
+    );
+
+    bubbles.forEach(function (bubble) {
+        observer.observe(bubble);
     });
 })();
